@@ -1,16 +1,16 @@
 :root {
-  --mainBrown: #2d1ef1;
+  --mainBrown: #2d1e1f;
   --mainRed: #ff9e09;
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
   --mainDark: #222;
-  --mainRed: #e33023;
+  --mainRed: rgb(227, 48, 35);
 }
 
 body {
   background: var(--mainWhite);
   color: var(--mainDark);
-  font-family: Verdana, Geneva, Tahoma, sans-serif !important; /* you have to use important flag w/ bootstrap so it doesnt overrie this css setting */
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important; /*you have to use important flag w/ bootstrap so it doesnt overrie this css setting */
 }
 h1,
 h2,
@@ -28,4 +28,21 @@ h6 {
   cursor: pointer;
   color: var(--mainRed);
   font-size: 2rem;
+}
+.default-background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(227, 48, 35, 0.5), rgba(227, 48, 35, 0.5));
+  background-position: center;
+  ebackground-size: cover;
+}
+.btn-red {
+  color: var(--mainRed);
+  border-color: var(--mainRed);
+}
+.btn-red:hover {
+  background: var(--mainRed);
+  color: var(--mainWhite);
 }
