@@ -12,11 +12,13 @@ import "./bootstrap.min.css"
 import "./layout.css"
 
 import Navbar from "./Globals/Navbar" //This is a better file to import the navbar into because if we were to put it in index.js then it wouldnt necessarily be on every page; but if we put it in layout.js then we can have this theme/item(navbar) across the entire layout of the site
+import Footer from "./Globals/Footer"
 
 const Layout = ({ children }) => (
   <>
     <Navbar />
     {children}
+    <Footer />
   </>
 )
 
