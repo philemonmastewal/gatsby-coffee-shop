@@ -29,14 +29,19 @@ h6 {
   color: var(--mainRed);
   font-size: 2rem;
 }
-.default-background {
+.default-background,
+.about-background {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(rgba(227, 48, 35, 0.5), rgba(227, 48, 35, 0.5));
   background-position: center;
-  ebackground-size: cover;
+  background-size: cover;
+}
+.about-background {
+  /* This is all we need to change for the about page for now */
+  min-height: 60vh;
 }
 .btn-red {
   color: var(--mainRed);
