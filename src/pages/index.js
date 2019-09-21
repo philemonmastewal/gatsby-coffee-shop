@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => (
     {/* <FaShoppingCart /> <<<test */}
     <BackgroundSection img={data.img.childImageSharp.fluid} title="buna" />
     <Info />
-    <Menu />
+    <Menu items={data.menu} />
   </Layout>
 )
 
