@@ -1,0 +1,8 @@
+Some things to do if we ever download this app fresh and have missing information
+
+// 
+npm install 
+create your .env.development file
+enter your contentful credentials
+
+//
