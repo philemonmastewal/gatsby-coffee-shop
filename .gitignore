@@ -4,6 +4,9 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.env.development
+#^^^^we need to add this so the info in env.development isnt being uploaded
+
 
 # Runtime data
 pids
