@@ -33,6 +33,13 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: "gatsby-plugin-snipcart",
+      options: {
+        apiKey: process.env.SNIPCART_API_KEY, //<<<remember that we want to use the env.development file to store sensitive information securely......dont forget to add the key to netlify though because it will not be on git, because of the gitignore file
+        autopop: true, // <<<I added this so that way every time something is added into the cart, the cart will pop up
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
