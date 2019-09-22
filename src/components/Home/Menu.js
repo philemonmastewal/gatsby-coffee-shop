@@ -24,8 +24,18 @@ export default class Menu extends Component {
     }
   }
   //we need to create a method that can do some kind of looping through the array we created above, and that willl handle sifting through the items/categories.... we will do this on the line below
-  handleItems = () => {
-    console.log("hello from handleItems")
+  handleItems = category => {
+    let tempItems = [...this.state.items]
+    if (category === "all") {
+      this.setState(() => {
+        return { menuItems: tempItems }
+      })
+    } else {
+      let items = tempItems.filter(({ node }) => node.category === category)
+      this.setState(() => {
+        return { menuItems: items }
+      })
+    }
   }
   render() {
     //below we will set up a conditional to see if there are any items to display, if there arent any items we will display a message, but if there are the  items will be displayed
@@ -35,6 +45,24 @@ export default class Menu extends Component {
           <div className="container">
             <Title title="best of our menu" />
             {/* categories */}
+            <div className="row mb-5">
+              <div className="col-10 mx-auto text-center">
+                {this.state.categories.map((category, index) => {
+                  return (
+                    <button
+                      type="button"
+                      key={index}
+                      className="btn btn-red text-capitalize m-3"
+                      onClick={() => {
+                        this.handleItems(category)
+                      }}
+                    >
+                      {category}
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
             {/* items */}
             <div className="row">
               {this.state.menuItems.map(({ node }) => {
